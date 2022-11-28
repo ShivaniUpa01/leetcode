@@ -33,3 +33,13 @@ class Solution:
         return result
 
 
+""" Optimise Solution"""
+
+
+class Solution:
+    def titleToNumber(self, columnTitle: str) -> int:
+        col = columnTitle[::-1]
+        result = 0
+        for i in range(len(columnTitle)):
+            result += (26 ** i) * (ord(col[i]) - 64)
+        return result
