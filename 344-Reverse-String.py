@@ -21,3 +21,6 @@ class Solution:
             i += 1
             j -= 1
         print(s)
+        # Solution 2
+        return s[::-1]
+        # it doesn't work on this program
