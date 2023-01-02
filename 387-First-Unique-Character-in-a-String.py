@@ -16,3 +16,18 @@ class Solution:
             if check.get(s[i]) != -1:
                 return i
         return -1
+
+    #Solution 2
+    for i in range(len(s)):
+        count = 0
+        for j in range(len(s)):
+            if i == j:
+                continue
+            elif s[i] == s[j]:
+                count -= 1
+                break
+            elif i != j and s[i] != s[j]:
+                count += 1
+        if count == len(s) - 1:
+            return i
+    return -1
